@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/cniu.art.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/6f31f22e53.js" crossorigin="anonymous"></script>
+
+    <!-- get social links -->
+    <script> 
+      $(function(){
+        $("#contactlinks").load("./contactlinks.html"); 
+      });
+    </script> 
+
+    <!-- fonts -->
+    <script> 
+      $(function(){
+        $("#myheader").load("./header.html"); 
+      });
+    </script>
+    
+    <!-- icon -->
+    <link rel="icon" href="/img/icon_red.png">
+
+    <title>Chuang Niu | Art</title>
+
+  </head>
+
+
+  <body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light py-4" z-index=10>
+
+      <a class="navbar-brand" href="../index.html"><b>Chuang Niu</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">about</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./visualfx.html">visual fx</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="./photography.html">photography</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./arts.html">arts</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/wordpress/index.php">blog</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="container-fluid" id="photogallerymenu">
+
+      <div class="row">
+        <div class="col text-center h6 py-3" id="collectionmenu">
+          <p><h3>Collecions</h3></p>
+          <p>*</p>
+          <p class="albumlist" onclick="loadGallery('On Body and Soul','72157690651925443')">On Body and Soul</p>
+          <p class="albumlist" onclick="loadGallery('Portrait','72157690657977233')">Portrait</p>
+          <p class="albumlist" onclick="loadGallery('Random','72157677471060257')">Random</p>
+          <p class="albumlist" onclick="loadGallery('Dreams','72157707886510174')">Dreams</p>
+        </div>
+
+        <div class="col" id="photogallerycol">
+
+          <div class="container-fluid" z-index=8>
+            <h2 class="container py-1 mx-auto text-center"></h2>
+            <h2 class="container py-3 mx-auto text-center" id="albumTitle"></h2>
+          </div>
+
+          <div class="container-fluid text-center photogallery" id="image_block" z-index=10>
+<!--             <img class="photoframe bg-white shadow-lg" src="https://farm5.staticflickr.com/4799/40610414042_5337f721ae_k.jpg">
+            <img class="photoframe bg-white shadow-lg" src="https://farm5.staticflickr.com/4649/26781115258_6fc2c82f2c_k.jpg">
+            <img class="photoframe bg-white shadow-lg" src="https://farm5.staticflickr.com/4802/26781140578_f7bd441498_k.jpg"> -->
+          </div>
+
+          <div class="container-fluid" z-index=1>
+            <h2 class="container py-5 mx-auto text-center"> Fin. </h2>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  <script type="text/javascript">
+    /*
+    function getSizeJson(photoApiCall){
+      return $.getJSON(photoApiCall);
+    };
+
+    async function getSize(photoApiCall){
+      var imgurl = "";
+      await getSizeJson();
+      size=getSizeJson(photoApiCall);
+      $.each(size, function(data){
+        $.each(data.sizes.size, function(i,imgsize){
+
+          if(imgsize.label=="Large") {
+            imgurl = imgsize.source;
+          };
+        });
+
+      });
+    console.log(imgurl);
+    return imgurl;
+    };
+    */
+
+    function loadGallery(title, gid){
+      var gid = gid;
+      var title = title;
+
+      var apiCall = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=ef9d35a1534455b3477fe43155ae8a14&photoset_id="+gid+"&user_id=144090174%40N03&extras=url_o&format=json&nojsoncallback=1";
+
+      // clear all images first
+      $(".photoframe").remove();
+      $("#albumTitle").html(title);
+
+      //SEND API CALL AND RETURN RESULTS TO A FUNCTION    
+      $.getJSON(apiCall, function(data){
+        console.log(data);
+
+          //LOOP THROUGH DATA
+          $.each(data.photoset.photo, function(i,photo){
+
+          var photoApiCall = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=ef9d35a1534455b3477fe43155ae8a14&photo_id="+photo.id+"&format=json&nojsoncallback=1";
+
+
+          //var img_src_large = getSize(photoApiCall);
+          //console.log(img_src_large);
+
+          var img_src = photo.url_o;
+          //PLACE IMAGE IN IMAGE TAG AND APPEND TO IMAGES DIV
+          $("<img/>").attr("src", img_src).addClass("photoframe bg-white").appendTo("#image_block")
+
+        });
+
+      });
+
+    };
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(loadGallery('On Body and Soul','72157690651925443'));
+  </script>
+
+    <div id="contactlinks"></div>
+
+    <div id="myheader"></div>
+
+  </body>
+
+</html>

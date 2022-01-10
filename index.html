@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/cniu.art.css">
+
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/6f31f22e53.js" crossorigin="anonymous"></script>
+
+    <!-- get social links -->
+    <script> 
+      $(function(){
+        $("#contactlinks").load("pages/contactlinks.html"); 
+      });
+    </script> 
+
+    <!-- fonts -->
+    <script> 
+      $(function(){
+        $("#myheader").load("pages/header.html"); 
+      });
+    </script>
+
+    <!-- icon -->
+    <link rel="icon" href="/img/icon_red.png">
+
+    <title>Chuang Niu | Art</title>
+
+  </head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light py-4" z-index=10>
+
+      <a class="navbar-brand active" href="index.html"><b>Chuang Niu</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="pages/about.html">about</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pages/visualfx.html">visual fx</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pages/photography.html">photography</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pages/arts.html">arts</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/wordpress/index.php">blog</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid pb-0" z-index=8 id="homebanner">
+      <img class="img-fluid px-5 py-5" src="img/welcome.jpg">
+    </div>
+
+    <div id="contactlinks"></div>
+
+    <div id="myheader"></div>
+
+  </body>
+
+</html>

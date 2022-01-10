@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/cniu.art.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/6f31f22e53.js" crossorigin="anonymous"></script>
+
+    <!-- get social links -->
+    <script> 
+      $(function(){
+        $("#contactlinks").load("./contactlinks.html"); 
+      });
+    </script> 
+
+    <!-- fonts -->
+    <script> 
+      $(function(){
+        $("#myheader").load("./header.html"); 
+      });
+    </script>
+
+    <!-- icon -->
+    <link rel="icon" href="/img/icon_red.png">
+
+    <title>Chuang Niu | Art</title>
+
+  </head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light py-4" z-index=10>
+
+      <a class="navbar-brand" href="../index.html"><b>Chuang Niu</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">about</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./visualfx.html">visual fx</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./photography.html">photography</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="./arts.html">arts</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/wordpress/index.php">blog</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+<!--     <div class="container-fluid text-center text-white-50" style="padding: 200px">
+      <h3>Arts section is still under construction...</h3>
+    </div> -->
+
+    <div class="container-fluid mx-auto py-5" id="postergallery">
+
+      <div class="container my-0 mt-0">
+        <h2 class="mx-auto text-center">Artwork</h2>
+      </div>
+      
+      <div class="row justify-content-around align-content-around align-items-center mx-5 px-5 my-5" id="postergalleryrow">
+        <script type="text/javascript">
+
+        var posternames = ['20160824-beliography-DSCF2859.jpg', '2017-11-16 20_04_31.237.jpg', '20180518-Yuan1-DSCF3356.jpg', '20180518-Yuan1-DSCF3365.jpg', '20190425-FriendsOfKew-DSCF4586.jpg', '20200501-2020.04.30.Quarantine-DSCF3961.jpg', '40D5E84B-F507-44E7-88F6-592BF7465071.jpg', '786DD0B0-DDB2-43BC-A537-0CE36532E0B8.jpg', 'IMG_0001.JPG', 'IMG_0023.JPG', 'IMG_0027.JPG', 'IMG_0036.JPG', 'IMG_0075.JPG', 'IMG_0313.JPG', 'IMG_0682.JPG', 'IMG_0791.JPG', 'IMG_0896.JPG', 'IMG_0908.JPG', 'IMG_0961.JPG', 'IMG_0962.JPG', 'IMG_0992(1).JPG', 'IMG_0992.JPG', 'IMG_1068.JPG', 'IMG_1445.JPG', 'IMG_1446.JPG', 'IMG_1684.JPG', 'IMG_1688.JPG', 'IMG_1699.JPG', 'IMG_1700.JPG', 'IMG_1756.JPG', 'IMG_1757.JPG', 'IMG_1761.JPG', 'IMG_1762.JPG', 'IMG_1763.JPG', 'IMG_1764.JPG', 'IMG_1811.JPG', 'IMG_1814.JPG', 'IMG_1832.JPG', 'IMG_1840.JPG', 'IMG_1894.JPG', 'IMG_1919.JPG', 'IMG_1944.JPG', 'IMG_1945.JPG', 'IMG_1947.JPG', 'IMG_1964.JPG', 'IMG_2103.JPG', 'IMG_2139.JPG', 'IMG_2162.JPG', 'IMG_2258.JPG', 'IMG_2268.JPG', 'IMG_2423.JPG', 'IMG_2491.JPG', 'IMG_2494.JPG', 'IMG_2500.JPG', 'IMG_2501.JPG', 'IMG_2502.JPG', 'IMG_2503.JPG', 'IMG_2504.JPG', 'IMG_2506.JPG', 'IMG_2507.JPG', 'IMG_2581.JPG', 'IMG_2582.JPG', 'IMG_2584.JPG', 'IMG_2585.JPG', 'IMG_2628.JPG', 'IMG_2702.PNG', 'IMG_2703.PNG', 'IMG_2704.JPG', 'IMG_2705.PNG', 'IMG_2706.PNG', 'IMG_2707.JPG', 'IMG_2709.JPG', 'IMG_3050.JPG', 'IMG_3093.JPG', 'IMG_3126.JPG', 'IMG_3516.JPG', 'IMG_3517.JPG', 'IMG_3523.JPG', 'IMG_3612.JPG', 'IMG_3615.JPG', 'IMG_3616.JPG', 'IMG_4130.JPG', 'IMG_4359.JPG', 'IMG_4381.JPG', 'IMG_5032.JPG', 'IMG_5049.JPG', 'IMG_6420.JPG', 'IMG_6421.JPG', 'IMG_6422.JPG', 'IMG_6423.JPG', 'IMG_7006.JPG', 'IMG_7431.JPG', 'IMG_7760.JPG', 'IMG_7805.JPG', 'IMG_7931.JPG', 'IMG_7982.JPG', 'IMG_7983.JPG', 'IMG_8022.JPG', 'IMG_8116.JPG', 'IMG_8253.JPG', 'IMG_8289.JPG', 'IMG_8299.JPG', 'IMG_8307.JPG', 'IMG_8351.JPG', 'IMG_8364.JPG', 'IMG_8437.JPG', 'IMG_8559.JPG', 'IMG_8671.JPG', 'IMG_8833.JPG', 'IMG_9309.JPG', 'IMG_9789.JPG', 'Snapseed.jpeg', 'Snapseed.jpg'];
+
+        var counter = 0;
+        var rowdiv;
+        posternames.forEach(function(el) {
+            /*
+            if (counter%3 == 0){
+              rowdiv = document.createElement("div");
+              rowdiv.className = "row triplet-row";
+              
+            }*/
+            var div = document.createElement("div");
+            var img = document.createElement("img");
+            var overlay = document.createElement("div");
+            var overlaydiv = document.createElement("div");
+            // var buttondetail = document.createElement("button");
+            div.className = "py-4 px-3 my-4 mx-4 text-center justify-content-around ";
+            img.className = "artworkimg";
+            img.setAttribute("data-toggle", "modal");
+            img.setAttribute("data-target", "#myModal");
+            img.setAttribute("data-backdrop","true");
+            img.setAttribute("onclick", "updateModalImg(this)");
+            //overlay.className = "overlay";
+            //overlaydiv.className = "overlaycontainer";
+            //buttondetail.className = "buttondetail btn btn-warning";
+            //buttondetail.innerHTML = "<b>Details</b>";
+            //buttondetail.type = "button";
+            img.src = '../img/artwork.small/'+el;
+            div.appendChild(img);
+            //div.appendChild(overlaydiv);
+            //overlaydiv.appendChild(overlay);
+            //overlaydiv.appendChild(buttondetail);
+
+            document.getElementById("postergalleryrow").appendChild(div);
+
+            /*
+            rowdiv.appendChild(div);
+            document.getElementById("postergalleryrow").appendChild(rowdiv);
+            counter += 1;
+            */
+
+        });
+        </script>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      
+      function updateModalImg(elem){
+        var srcImg = elem.getAttribute("src");
+        var largeSrcImg = srcImg.replace("artwork.small", "artwork");
+
+        var modalObj = document.getElementById("modalFocusImg");
+        modalObj.setAttribute("src",largeSrcImg);
+
+        var infoObj = document.getElementById("imgInfo0");
+        infoObj.innerHTML = largeSrcImg;
+      }
+
+    </script>
+
+
+  <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+         <div class="modal-content">
+
+          <div class="container-fluid noblurobj" id="modalFocusImgContainer" z-index=8>
+            <img class="img-fluid px-1 py-3 noblurobj" id="modalFocusImg" src="../img/welcome.jpg">
+          </div>
+
+          <div class="container my-0 mt-0">
+            <p class="mx-auto text-left text-white noblurobj" id="imgInfo0" id=> info </p>
+            <p class="mx-auto text-left text-white noblurobj" id="imgInfo1" id=></p>
+            <p class="mx-auto text-left text-white noblurobj" id="imgInfo2" id=></p>
+            <p class="mx-auto text-left text-white noblurobj" id="imgInfo3" id=></p>
+          </div>
+
+         </div>
+      </div>
+    </div>
+
+    <div id="contactlinks"></div>
+
+    <div id="myheader"></div>
+
+  </body>
+
+</html>

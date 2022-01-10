@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/cniu.art.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/6f31f22e53.js" crossorigin="anonymous"></script>
+
+    <!-- get social links -->
+    <script> 
+      $(function(){
+        $("#contactlinks").load("./contactlinks.html"); 
+      });
+    </script> 
+
+    <!-- fonts -->
+    <script> 
+      $(function(){
+        $("#myheader").load("./header.html"); 
+      });
+    </script>
+    
+    <!-- icon -->
+    <link rel="icon" href="/img/icon_red.png">
+
+    <title>Chuang Niu | Art</title>
+
+  </head>
+
+
+  <body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light py-4" z-index=10>
+
+      <a class="navbar-brand" href="../index.html"><b>Chuang Niu</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">about</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="./visualfx.html">visual fx</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./photography.html">photography</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./arts.html">arts</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/wordpress/index.php">blog</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="container-fluid pb-3" z-index=8>
+
+      <h2 class="container py-5 mx-auto text-center">Visual Effects Showreel</h2>
+
+      <div class="container mx-auto mt-0">
+        <div class="shadow-lg rounded" style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/326097428?color=ff0179&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+    </div>
+
+    <div class="container-fluid mx-auto py-5" id="postergallery">
+
+      <div class="container my-0 mt-0">
+        <h2 class="mx-auto text-center">Film</h2>
+      </div>
+      
+      <div class="row justify-content-around align-content-around" id="postergalleryrow">
+        <script type="text/javascript">
+
+        var posternames = ["godzilla", "ithots", "junglebook", "jurrasic", "rogueone", "rpo", "thelastjedi", "thor", "transcendence", "transformer","aladdin","theriseofskywalker","artemisfowl","eternals"];
+
+        posternames.forEach(function(el) {
+            var div = document.createElement("div");
+            var img = document.createElement("img");
+            var overlay = document.createElement("div");
+            var overlaydiv = document.createElement("div");
+            var buttondetail = document.createElement("button");
+            div.className = "my-5 mx-5 text-center justify-content-around postercontainer";
+            img.className = "posterimg";
+            overlay.className = "overlay";
+            overlaydiv.className = "overlaycontainer";
+            buttondetail.className = "buttondetail btn btn-warning";
+            buttondetail.innerHTML = "<b>Details</b>";
+            buttondetail.type = "button";
+            img.src = '../img/posters.small/'+el+'.jpg';
+            div.appendChild(img);
+            div.appendChild(overlaydiv);
+            overlaydiv.appendChild(overlay);
+            overlaydiv.appendChild(buttondetail);
+            document.getElementById("postergalleryrow").appendChild(div);
+        });
+        </script>
+      </div>
+    </div>
+
+    <div id="contactlinks"></div>
+
+    <div id="myheader"></div>
+
+  </body>
+
+</html>

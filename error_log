@@ -1,0 +1,2 @@
+[29-Nov-2019 22:54:48 America/New_York] PHP Warning:  filesize(): stat failed for /home/cniugklk/public_html/index.php in /home/cniugklk/public_html/check.php on line 10
+[29-Nov-2019 22:54:48 America/New_York] PHP Warning:  file_get_contents(/home/cniugklk/public_html/index.php): failed to open stream: No such file or directory in /home/cniugklk/public_html/check.php on line 14
