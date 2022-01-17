@@ -90,11 +90,11 @@
         <h2 class="mx-auto text-center">Artwork</h2>
       </div> -->
 
-      <div class="row justify-content-around align-content-around align-items-center mx-1 px-1 my-5 " id="artcategorymenu">
-        <p class="albumlist" onclick="loadArt('digital')">Drawings</p>
-        <p class="albumlist" onclick="loadArt('traditional')">Paintings</p>
+      <div class="row justify-content-around align-content-around align-items-center mx-1 px-1 my-1 " id="artcategorymenu">
+        <p class="albumlist" onclick="loadArt('drawings')">Drawings</p>
+        <p class="albumlist" onclick="loadArt('paintings')">Paintings</p>
         <p class="albumlist" onclick="loadArt('stills')">Stills</p>
-        <p class="albumlist" onclick="loadArt('traditional')">Dynamics</p>
+        <p class="albumlist" onclick="loadArt('dynamics')">Dynamics</p>
       </div>
 
       
@@ -176,45 +176,16 @@
 
 
     let artentries = {
-      "digital":[
-        "20160824-beliography-DSCF2859.jpg", 
-        "2017-11-16 20_04_31.237.jpg", 
-        "20180518-Yuan1-DSCF3356.jpg", 
-        "20180518-Yuan1-DSCF3365.jpg", 
-        "20190425-FriendsOfKew-DSCF4586.jpg", 
-        "20200501-2020.04.30.Quarantine-DSCF3961.jpg", 
-        "40D5E84B-F507-44E7-88F6-592BF7465071.jpg", 
-        "786DD0B0-DDB2-43BC-A537-0CE36532E0B8.jpg"
+      "paintings":[
+        "IMG_0001.JPG","IMG_0075.JPG","IMG_1446.JPG","IMG_1756.JPG","IMG_1761.JPG","IMG_1762.JPG","IMG_1763.JPG","IMG_1764.JPG","IMG_1840.JPG","IMG_1944.JPG","IMG_1947.JPG","IMG_2268.JPG","IMG_2702.PNG","IMG_2703.PNG","IMG_2704.JPG","IMG_2705.PNG","IMG_2706.PNG","IMG_2707.JPG","IMG_2709.JPG","IMG_4130.JPG","IMG_4359.JPG","IMG_4381.JPG","IMG_7760.JPG","IMG_7805.JPG","IMG_7931.JPG","IMG_8116.JPG","IMG_8253.JPG","IMG_8307.JPG","IMG_8351.JPG","IMG_8364.JPG","IMG_8437.JPG","IMG_9309.JPG","Snapseed.jpg"
       ],
 
-      "traditional":[
-        "IMG_0001.JPG", 
-        "IMG_0023.JPG", 
-        "IMG_0027.JPG", 
-        "IMG_0036.JPG", 
-        "IMG_0075.JPG", 
-        "IMG_0313.JPG", 
-        "IMG_0682.JPG", 
-        "IMG_0791.JPG", 
-        "IMG_0896.JPG", 
-        "IMG_0908.JPG", 
-        "IMG_0961.JPG", 
-        "IMG_0962.JPG"
+      "drawings":[
+        "40D5E84B-F507-44E7-88F6-592BF7465071.jpg","786DD0B0-DDB2-43BC-A537-0CE36532E0B8.jpg","IMG_0961.JPG","IMG_0962.JPG","IMG_1700.JPG","IMG_1757.JPG","IMG_1811.JPG","IMG_1814.JPG","IMG_1832.JPG","IMG_1894.JPG","IMG_1919.JPG","IMG_2103.JPG","IMG_2139.JPG","IMG_2162.JPG","IMG_2258.JPG","IMG_2423.JPG","IMG_2491.JPG","IMG_2494.JPG","IMG_2500.JPG","IMG_2501.JPG","IMG_2502.JPG","IMG_2503.JPG","IMG_2504.JPG","IMG_2506.JPG","IMG_2507.JPG","IMG_2582.JPG","IMG_2585.JPG","IMG_2628.JPG","IMG_3516.JPG"
       ],
 
       "stills":[
-        "IMG_0992(1).JPG", 
-        "IMG_0992.JPG", 
-        "IMG_1068.JPG", 
-        "IMG_1445.JPG", 
-        "IMG_1446.JPG", 
-        "IMG_1684.JPG", 
-        "IMG_1688.JPG", 
-        "IMG_1699.JPG", 
-        "IMG_1700.JPG", 
-        "IMG_1756.JPG", 
-        "IMG_1757.JPG", 
-        "IMG_1761.JPG"
+        "2021.4.27.CropCircle8.jpg","2021.5.12.MantaRays3.jpg","2021.5.12.MantaRays4.jpg","2021.5.12.MantaRays7.jpg","2021.5.12.MantaRays8.jpg","2021.5.13.Jellyfish2.jpg","2021.5.2.CropCircleETH1.jpg","2021.5.25.Jellyfish4.png","CropCircleBTC_Large.jpg","CropCircle_Chai_Master.v3.jpg","Hair_Follicle_Comp.v4.jpg","OscarTheatre.v1.png","OscarTheatre.v2.png","OscarTheatre.v3.png","OscarTheatre.v4.png"
       ]
       
       
@@ -239,7 +210,7 @@
         img.setAttribute("data-backdrop","true");
         img.setAttribute("onclick", "updateModalImg(this)");
 
-        img.src = '../img/artwork.small/'+el;
+        img.src = '../img/artwork.small/'+cat+'/'+el;
         div.appendChild(img);
         document.getElementById("postergalleryrow").appendChild(div);
 
