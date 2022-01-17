@@ -69,6 +69,7 @@ h2 {
 
 .albumlist {
   cursor: pointer;
+  font-size: larger;
 }
 
 .photogallery {
@@ -87,6 +88,12 @@ h2 {
 #collectionmenu {
     min-width: 200px !important;
     max-width: 10%;
+}
+
+#artcategorymenu {
+    min-width: 200px !important;
+    font-family: 'Cabin', sans-serif;
+    font-size: larger;
 }
 
 .row {
