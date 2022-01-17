@@ -7,13 +7,15 @@
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
   --tron-text-color: #000; /*#4d4d4d;*/
+  --base-font: 'Exo 2';
 }
 
 body {
   margin: 0;
-  font-family: 'Cabin', sans-serif;
+  font-family: var(--base-font), sans-serif;
   background-color: var(--tron-background-color);
   letter-spacing: 0.05rem;
+  font-size: 1.2rem;
   user-select: none;
   color: var(--tron-text-color);
 }
@@ -50,7 +52,7 @@ h2 {
 
 .nav-link {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .nav-link.active {
@@ -92,7 +94,7 @@ h2 {
 
 #artcategorymenu {
     min-width: 200px !important;
-    font-family: 'Cabin', sans-serif;
+    font-family: var(--base-font), sans-serif;
     font-size: larger;
 }
 
